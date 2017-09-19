@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064627151F70A2910057E96F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 064627141F70A2910057E96F /* GoogleService-Info.plist */; };
 		066C65201F6C6BCE00FF29F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C651F1F6C6BCE00FF29F3 /* AppDelegate.swift */; };
 		066C65221F6C6BCE00FF29F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C65211F6C6BCE00FF29F3 /* ViewController.swift */; };
 		066C65251F6C6BCE00FF29F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066C65231F6C6BCE00FF29F3 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		064627141F70A2910057E96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		066C651C1F6C6BCE00FF29F3 /* ios-swift-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-swift-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		066C651F1F6C6BCE00FF29F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		066C65211F6C6BCE00FF29F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		066C651E1F6C6BCE00FF29F3 /* ios-swift-demo */ = {
 			isa = PBXGroup;
 			children = (
+				064627141F70A2910057E96F /* GoogleService-Info.plist */,
 				066C651F1F6C6BCE00FF29F3 /* AppDelegate.swift */,
 				066C65211F6C6BCE00FF29F3 /* ViewController.swift */,
 				066C65231F6C6BCE00FF29F3 /* Main.storyboard */,
@@ -178,6 +181,7 @@
 				066C651A1F6C6BCE00FF29F3 /* Resources */,
 				044ABC9CF7454806CC812002 /* [CP] Embed Pods Frameworks */,
 				E28897DF76472170F68D9EFD /* [CP] Copy Pods Resources */,
+				063816841F6C78E70034C882 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				066C652A1F6C6BCE00FF29F3 /* LaunchScreen.storyboard in Resources */,
+				064627151F70A2910057E96F /* GoogleService-Info.plist in Resources */,
 				066C65271F6C6BCE00FF29F3 /* Assets.xcassets in Resources */,
 				066C65251F6C6BCE00FF29F3 /* Main.storyboard in Resources */,
 			);
@@ -313,14 +318,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios-swift-demo/Pods-ios-swift-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TraceLog/TraceLog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TraceLog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-swift-demo/Pods-ios-swift-demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		063816841F6C78E70034C882 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/\" --enable blankLinesAtEndOfScope,blankLinesBetweenScopes,braces,consecutiveBlankLines,consecutiveSpaces,hoistPatternLet,indent,linebreakAtEndOfFile,linebreaks,numberFormatting,ranges,redundantBackticks,redundantGet,redundantLet,redundantNilInit,redundantParens,redundantPattern,redundantRawValues,redundantReturn,redundantSelf,redundantVoidReturnType,redundantInit,semicolons,spaceAroundBraces,spaceAroundBrackets,spaceAroundComments,spaceAroundGenerics,spaceAroundOperators,spaceAroundParens,spaceInsideBraces,spaceInsideBrackets,spaceInsideComments,spaceInsideGenerics,spaceInsideParens,specifiers,trailingClosures,trailingCommas,trailingSpace,todos,unusedArguments,void,wrapArguments --disable elseOnSameLine,fileHeader --allman true --binarygrouping 4,8 --commas always --comments indent --decimalgrouping 3,6 --empty void --experimental disabled --exponentcase uppercase --hexgrouping 4,8 --hexliteralcase uppercase --ifdef indent --indent 4 --insertlines enabled --linebreaks lf --octalgrouping 4,8 --patternlet hoist --ranges spaced --removelines enabled --semicolons inline --self remove --stripunusedargs always --trimwhitespace always --wraparguments afterfirst --wrapelements beforefirst";
 		};
 		347F6B1BE90A725625C21B61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -718,6 +739,7 @@
 				066C65461F6C6BCE00FF29F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		066C65471F6C6BCE00FF29F3 /* Build configuration list for PBXNativeTarget "ios-swift-demoTests" */ = {
 			isa = XCConfigurationList;
@@ -726,6 +748,7 @@
 				066C65491F6C6BCE00FF29F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		066C654A1F6C6BCE00FF29F3 /* Build configuration list for PBXNativeTarget "ios-swift-demoUITests" */ = {
 			isa = XCConfigurationList;
@@ -734,6 +757,7 @@
 				066C654C1F6C6BCE00FF29F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 import UIKit
 import TraceLog
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         TraceLog.configure(environment: ["LOG_ALL": "TRACE1"])
         logTrace { "enter application didFinishLaunchingWithOptions" }
         logTrace { "exit application didFinishLaunchingWithOptions" }
+        FirebaseApp.configure()
         return true
     }
 

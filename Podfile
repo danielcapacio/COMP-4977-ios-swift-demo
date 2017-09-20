@@ -9,6 +9,8 @@ target 'ios-swift-demo' do
     pod 'SwiftFormat/CLI'
     pod 'TraceLog'
     pod 'Firebase/Core'
+    pod 'Fabric'
+    pod 'Crashlytics'
 
   target 'ios-swift-demoTests' do
     inherit! :search_paths

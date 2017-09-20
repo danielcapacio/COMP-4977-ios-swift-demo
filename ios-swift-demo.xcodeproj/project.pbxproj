@@ -181,7 +181,8 @@
 				066C651A1F6C6BCE00FF29F3 /* Resources */,
 				044ABC9CF7454806CC812002 /* [CP] Embed Pods Frameworks */,
 				E28897DF76472170F68D9EFD /* [CP] Copy Pods Resources */,
-				063816841F6C78E70034C882 /* ShellScript */,
+				063816841F6C78E70034C882 /* SwiftFormat */,
+				064627161F70AD400057E96F /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -334,18 +335,33 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-swift-demo/Pods-ios-swift-demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		063816841F6C78E70034C882 /* ShellScript */ = {
+		063816841F6C78E70034C882 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = SwiftFormat;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/\" --enable blankLinesAtEndOfScope,blankLinesBetweenScopes,braces,consecutiveBlankLines,consecutiveSpaces,hoistPatternLet,indent,linebreakAtEndOfFile,linebreaks,numberFormatting,ranges,redundantBackticks,redundantGet,redundantLet,redundantNilInit,redundantParens,redundantPattern,redundantRawValues,redundantReturn,redundantSelf,redundantVoidReturnType,redundantInit,semicolons,spaceAroundBraces,spaceAroundBrackets,spaceAroundComments,spaceAroundGenerics,spaceAroundOperators,spaceAroundParens,spaceInsideBraces,spaceInsideBrackets,spaceInsideComments,spaceInsideGenerics,spaceInsideParens,specifiers,trailingClosures,trailingCommas,trailingSpace,todos,unusedArguments,void,wrapArguments --disable elseOnSameLine,fileHeader --allman true --binarygrouping 4,8 --commas always --comments indent --decimalgrouping 3,6 --empty void --experimental disabled --exponentcase uppercase --hexgrouping 4,8 --hexliteralcase uppercase --ifdef indent --indent 4 --insertlines enabled --linebreaks lf --octalgrouping 4,8 --patternlet hoist --ranges spaced --removelines enabled --semicolons inline --self remove --stripunusedargs always --trimwhitespace always --wraparguments afterfirst --wrapelements beforefirst";
+		};
+		064627161F70AD400057E96F /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" fe02e7eceb2c8235cffebb775a52a385cfb492fb 6147608c4d88711eb9adab07aa84557d1c6dad2de65df8f8b886d16efaf745b7";
 		};
 		347F6B1BE90A725625C21B61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

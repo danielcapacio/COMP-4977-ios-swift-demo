@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.8.6):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.13)
   - Firebase/Core (4.1.1):
     - FirebaseAnalytics (= 4.0.3)
     - FirebaseCore (= 4.0.6)
@@ -26,11 +29,15 @@ PODS:
   - TraceLog/Swift (2.0.2)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/Core
   - SwiftFormat/CLI
   - TraceLog
 
 SPEC CHECKSUMS:
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
   FirebaseAnalytics: 76f754d37ca5b04f36856729b6af3ca0152d1069
   FirebaseCore: 28def3c643989c97ea5a69ea5000f5fa9902b9fd
@@ -40,6 +47,6 @@ SPEC CHECKSUMS:
   SwiftFormat: 9aadf994b01d08400d3d1b0112116d50e468ebd7
   TraceLog: d853ab3e97f8cabaf0bbe3d0f53da81a51744d2d
 
-PODFILE CHECKSUM: 0acc0800051369a43076bbd7bb8dc3e9732aa21b
+PODFILE CHECKSUM: d5dda68e87c5a9050648017944914598d0ef7961
 
 COCOAPODS: 1.3.1

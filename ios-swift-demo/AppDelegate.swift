@@ -9,6 +9,8 @@
 import UIKit
 import TraceLog
 import Firebase
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -20,8 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Override point for customization after application launch.
         TraceLog.configure(environment: ["LOG_ALL": "TRACE1"])
         logTrace { "enter application didFinishLaunchingWithOptions" }
-        logTrace { "exit application didFinishLaunchingWithOptions" }
         FirebaseApp.configure()
+        Fabric.with([Crashlytics.self])
+        logTrace { "exit application didFinishLaunchingWithOptions" }
         return true
     }
 

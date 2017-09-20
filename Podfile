@@ -12,6 +12,8 @@ target 'ios-swift-demo' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Firebase/Performance'
+    pod 'Firebase/RemoteConfig'
+    pod 'UIColor_Hex_Swift'
 
   target 'ios-swift-demoTests' do
     inherit! :search_paths

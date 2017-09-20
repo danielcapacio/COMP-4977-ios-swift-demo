@@ -11,6 +11,7 @@ target 'ios-swift-demo' do
     pod 'Firebase/Core'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Firebase/Performance'
 
   target 'ios-swift-demoTests' do
     inherit! :search_paths

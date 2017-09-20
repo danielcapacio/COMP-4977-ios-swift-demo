@@ -8,6 +8,7 @@
 
 import UIKit
 import TraceLog
+import FirebasePerformance
 
 class ViewController: UIViewController
 {
@@ -16,6 +17,9 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         logTrace { "enter viewDidLoad" }
+        let trace = Performance.startTrace(name: "test trace")!
+        trace.incrementCounter(named: "viewDidLoad")
+        trace.stop()
         logTrace { "exit viewDidLoad" }
     }
 
